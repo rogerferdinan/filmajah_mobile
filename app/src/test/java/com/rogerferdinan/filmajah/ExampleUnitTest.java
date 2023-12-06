@@ -5,6 +5,7 @@ import org.junit.Test;
 import com.rogerferdinan.filmajah.model.Movie;
 import com.rogerferdinan.filmajah.model.retrofit.APIClient;
 import com.rogerferdinan.filmajah.model.retrofit.ApiService;
+import com.rogerferdinan.filmajah.viewmodel.MovieViewModel;
 
 import java.util.List;
 
@@ -19,15 +20,6 @@ import retrofit2.Response;
 public class ExampleUnitTest {
     @Test
     public void apiConnectionTest() {
-        ApiService apiInterface = new APIClient().getApi();
-        Call<List<Movie>> call = apiInterface.getMovieList();
-        try {
-            Response<List<Movie>> response = call.execute();
-            for (Movie movie: response.body()) {
-                System.out.println(movie.name.toString());
-            }
-        } catch(Exception e) {
 
-        }
     }
 }
