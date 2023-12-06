@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282C38">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="291dp"
+        android:layout_height="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.233"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvBackArrow"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/Inter_Black"
+        android:text="Log In"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/Inter_Light_"
+        android:gravity="center_vertical"
+        android:text="Back"
+        android:textColor="#ffffff"
+        android:textFontWeight="200"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.34" />
+
+    <ImageButton
+        android:id="@+id/ibBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ep_back"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+
+        android:id="@+id/llWhiteBox"
+        android:layout_width="417dp"
+        android:layout_height="376dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/white_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/Inter_Black"
+            android:text="Email"
+            android:textColor="#282C38"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etEmailAddress"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" />
+
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/Inter_Black"
+            android:text="Password"
+            android:textColor="#282C38"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/tvForgotPass"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/Inter_Light_"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="120dp"
+            android:textFontWeight="5000"
+            android:gravity="center"
+            android:textColor="#282C38"
+            android:text="Forgot Password ?" />
+
+        <Button
+            android:id="@+id/btnLogIn"
+            android:layout_width="191dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/Inter_Black"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:text="Log In"
+           />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
