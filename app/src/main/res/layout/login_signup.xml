@@ -11,12 +11,12 @@
 
     <LinearLayout
         android:id="@+id/rectangle_2"
-        android:layout_width="415dp"
-        android:layout_height="260dp"
+        android:layout_width="409dp"
+        android:layout_height="253dp"
         android:background="@drawable/white_bg"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,7 +36,7 @@
         android:layout_width="191dp"
         android:layout_height="55dp"
         android:backgroundTint="@color/primary"
-        android:fontFamily="@font/inter_black"
+        android:fontFamily="@font/Inter_Black"
         android:elevation="20dp"
         android:padding="10dp"
         android:textSize="16dp"
@@ -53,7 +53,7 @@
         android:layout_height="55dp"
         android:backgroundTint="@color/primary"
         android:text="Sign Up"
-        android:fontFamily="@font/inter_black"
+        android:fontFamily="@font/Inter_Black"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
         android:layout_height="35dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:fontFamily="@font/inter_black"
+        android:fontFamily="@font/Inter_Black"
         android:text="Welcome"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
