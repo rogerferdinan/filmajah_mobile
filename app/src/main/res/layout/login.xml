@@ -18,43 +18,41 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/tvBackArrow"
-        android:layout_width="100dp"
-        android:layout_height="45dp"
+        android:id="@+id/tvLogin"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/Inter_Black"
         android:text="Log In"
         android:textColor="#ffffff"
-        android:textSize="28sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="31dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/Inter_Light_"
         android:gravity="center_vertical"
         android:text="Back"
         android:textColor="#ffffff"
         android:textFontWeight="200"
-        android:textSize="26sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.217"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/ibBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,16 +79,16 @@
 
         <TextView
             android:id="@+id/tvEmail"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/Inter_Black"
             android:text="Email"
             android:textColor="#282C38"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etEmailAddress"
@@ -99,17 +97,16 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="5dp"
             android:background="@drawable/email_section_edit"
             android:ems="10"
-            android:hint="Email Address"
+            android:hint="Email Addresss"
             android:inputType="textEmailAddress" />
 
 
         <TextView
             android:id="@+id/tvPassword"
-            android:layout_width="130dp"
-            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
@@ -117,7 +114,7 @@
             android:fontFamily="@font/Inter_Black"
             android:text="Password"
             android:textColor="#282C38"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etPass"
@@ -126,7 +123,6 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="5dp"
             android:background="@drawable/email_section_edit"
             android:ems="10"
             android:hint="Password"

@@ -1,7 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary">
+    android:background="#282C38">
 
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="264dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="95dp"
+        android:layout_height="34dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/Inter_Black"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="61dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/Inter_Light_"
+        android:gravity="center_vertical"
+        android:text="Back"
+        android:textColor="#ffffff"
+        android:textFontWeight="200"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/ibBackButton_su"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/ep_back"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/llWhiteBox"
+        android:layout_width="412dp"
+        android:layout_height="489dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/white_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/Inter_Black"
+            android:text="Email"
+            android:textColor="#282C38"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etEmailAddress"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="johndoe@gmail.com"
+            android:inputType="textEmailAddress" />
+
+
+        <TextView
+            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/Inter_Black"
+            android:text="Password"
+            android:textColor="#282C38"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tvConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/Inter_Black"
+            android:text="Confirm Password"
+            android:textColor="#282C38"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etConfirmPass"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/Inter_Black"
+            android:text="Full Name"
+            android:textColor="#282C38"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="John Doe" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="191dp"
+            android:layout_height="55dp"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/Inter_Black"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:text="Sign Up"
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
