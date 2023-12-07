@@ -2,34 +2,39 @@ package com.rogerferdinan.filmajah.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentContainerView;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.LinearLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rogerferdinan.filmajah.R;
-import com.rogerferdinan.filmajah.model.Movie;
-import com.rogerferdinan.filmajah.view.recyclerview.MovieAdapter;
-import com.rogerferdinan.filmajah.viewmodel.MovieViewModel;
-
-import java.util.List;
+import com.rogerferdinan.filmajah.view.fragment.CollectionFragment;
+import com.rogerferdinan.filmajah.view.fragment.HomeFragment;
+import com.rogerferdinan.filmajah.view.fragment.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .setReorderingAllowed(true)
-                    .add(R.id.fragment_container, CollectionFragment.class, null)
-                    .commit();
-        }
+        changeFragment(R.id.fragment_container, HomeFragment.class);
+        BottomNavigationView navigationView = findViewById(R.id.bot_nav);
+        navigationView.setOnItemSelectedListener(item -> {
+            if(item.getItemId() == R.id.home) {
+                changeFragment(R.id.fragment_container, HomeFragment.class);
+                return true;
+            } else if (item.getItemId() == R.id.collection) {
+                changeFragment(R.id.fragment_container, CollectionFragment.class);
+                return true;
+            } else if(item.getItemId() == R.id.profile) {
+                changeFragment(R.id.fragment_container, ProfileFragment.class);
+                return true;
+            }
+            return false;
+        });
+    }
+    void changeFragment(int container, Class<? extends Fragment> fragment_class) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(container, fragment_class, null)
+                .commit();
     }
 }

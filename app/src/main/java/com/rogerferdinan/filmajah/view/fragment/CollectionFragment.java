@@ -1,4 +1,4 @@
-package com.rogerferdinan.filmajah.view;
+package com.rogerferdinan.filmajah.view.fragment;
 
 import android.os.Bundle;
 import android.view.View;
