@@ -44,6 +44,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         holder.tvNama.setText(movieList.get(position).name);
         Picasso.get()
                 .load(base_url+movieList.get(position).image_url)
+                .placeholder(R.drawable.profile)
                 .into(holder.ivMovie);
     }
 
