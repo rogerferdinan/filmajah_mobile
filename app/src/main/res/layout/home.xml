@@ -16,8 +16,7 @@
         android:layout_marginTop="35dp"
         android:background="@drawable/search_shape"
         android:focusable="false"
-        android:hint="Search"
-
+        app:queryHint="Search"
         android:theme="@style/theme_search"
         app:iconifiedByDefault="false"
         app:searchHintIcon="@null"
@@ -35,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,4 +53,5 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="120dp" />
+
 </LinearLayout>
