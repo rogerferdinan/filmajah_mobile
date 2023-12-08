@@ -22,11 +22,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     }
     public static class ViewHolder extends RecyclerView.ViewHolder {
         //private final TextView tvNama;
-        private final ImageView ivMovie;
+       // private final ImageView ivMovie;
         public ViewHolder(View v) {
             super(v);
             // tvNama = (TextView) v.findViewById(R.id.tvNama);
-            ivMovie = (ImageView) v.findViewById(R.id.ivMovie);
+            // ivMovie = (ImageView) v.findViewById(R.id.ivMovie);
         }
     }
 
@@ -43,8 +43,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
      //   holder.tvNama.setText(movieList.get(position).name);
         Picasso.get()
                 .load(base_url+movieList.get(position).image_url)
-                .placeholder(R.drawable.profile)
-                .into(holder.ivMovie);
+                .placeholder(R.drawable.profile);
+            //    .into(holder.ivMovie);
     }
 
     @Override

@@ -16,8 +16,10 @@
         android:layout_marginTop="35dp"
         android:background="@drawable/search_shape"
         android:focusable="false"
-        android:theme="@style/theme_search"
+        android:hint="Search"
 
+        android:theme="@style/theme_search"
+        app:iconifiedByDefault="false"
         app:searchHintIcon="@null"
         app:searchIcon="@drawable/baseline_search_24" />
 
