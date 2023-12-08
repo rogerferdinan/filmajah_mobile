@@ -12,9 +12,11 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary" />
+        android:background="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/primary"
@@ -23,15 +25,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/tvBackArrow"
+        <ImageButton
+            android:id="@+id/ivMovie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:src="@tools:sample/avatars"
-            app:srcCompat="@drawable/ep_back" />
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.047"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022"
+            app:srcCompat="@drawable/ep_back"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/MovieInfo"
@@ -47,8 +53,7 @@
         <LinearLayout
             android:layout_width="401dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-        </LinearLayout>
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,7 +66,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:src="@tools:sample/avatars"
                 app:srcCompat="@drawable/rubicon" />
 
             <LinearLayout
@@ -182,11 +186,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="12dp"
             android:layout_marginRight="200dp"
+            android:layout_marginBottom="12dp"
             android:layout_weight="0"
-            android:src="@tools:sample/avatars"
-            app:srcCompat="@drawable/addToCollection" />
+            app:srcCompat="@drawable/add_to_collection" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
