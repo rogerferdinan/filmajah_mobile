@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,11 +21,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         this.movieList = movieList;
     }
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView tvNama;
+        //private final TextView tvNama;
         private final ImageView ivMovie;
         public ViewHolder(View v) {
             super(v);
-            tvNama = (TextView) v.findViewById(R.id.tvNama);
+            // tvNama = (TextView) v.findViewById(R.id.tvNama);
             ivMovie = (ImageView) v.findViewById(R.id.ivMovie);
         }
     }
@@ -34,14 +33,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_layout, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_info, parent, false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String base_url = "https://filmajah.rogerferdinan.com/";
-        holder.tvNama.setText(movieList.get(position).name);
+     //   holder.tvNama.setText(movieList.get(position).name);
         Picasso.get()
                 .load(base_url+movieList.get(position).image_url)
                 .placeholder(R.drawable.profile)

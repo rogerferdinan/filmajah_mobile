@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:background="#282C38">
 
+
     <ImageView
-        android:id="@+id/ivLogo"
         android:layout_width="264dp"
         android:layout_height="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -15,41 +15,23 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155"
+        app:layout_constraintVertical_bias="0.131"
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/tvLogin"
         android:layout_width="95dp"
         android:layout_height="34dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/inter_black"
         android:text="Sign Up"
         android:textColor="#ffffff"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvBack"
-        android:layout_width="61dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/inter_light"
-        android:gravity="center_vertical"
-        android:text="Back"
-        android:textColor="#ffffff"
-        android:textFontWeight="200"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageButton
         android:id="@+id/ibBackButton_su"
@@ -77,7 +59,6 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -99,11 +80,35 @@
             android:background="@drawable/email_section_edit"
             android:ems="10"
             android:hint="johndoe@gmail.com"
+            android:paddingStart="10dp"
             android:inputType="textEmailAddress" />
 
 
         <TextView
-            android:id="@+id/tvPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/inter_black"
+            android:text="Full Name"
+            android:textColor="#282C38"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/email_section_edit"
+            android:ems="10"
+            android:hint="John Doe"
+            android:paddingStart="10dp" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -125,10 +130,10 @@
             android:background="@drawable/email_section_edit"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:paddingStart="10dp" />
 
         <TextView
-            android:id="@+id/tvConfirmPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -149,32 +154,9 @@
             android:layout_marginLeft="35dp"
             android:background="@drawable/email_section_edit"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:id="@+id/tvNama"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="7dp"
-            android:fontFamily="@font/inter_black"
-            android:text="Full Name"
-            android:textColor="#282C38"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/etNama"
-            android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="35dp"
-            android:background="@drawable/email_section_edit"
-            android:ems="10"
-            android:hint="John Doe" />
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"/>
 
         <Button
             android:id="@+id/btnSignUp"
@@ -187,5 +169,6 @@
             android:padding="10dp"
             android:textSize="16dp"
             android:text="Sign Up" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
