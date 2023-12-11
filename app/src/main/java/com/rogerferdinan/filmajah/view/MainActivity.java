@@ -9,6 +9,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rogerferdinan.filmajah.R;
 import com.rogerferdinan.filmajah.view.fragment.CollectionFragment;
 import com.rogerferdinan.filmajah.view.fragment.HomeFragment;
+import com.rogerferdinan.filmajah.view.fragment.MovieInfoFragment;
 import com.rogerferdinan.filmajah.view.fragment.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigationView = findViewById(R.id.bot_nav);
         navigationView.setOnItemSelectedListener(item -> {
             if(item.getItemId() == R.id.home) {
-                changeFragment(R.id.fragment_container, HomeFragment.class);
+                changeFragment(R.id.fragment_container, MovieInfoFragment.class);
                 return true;
             } else if (item.getItemId() == R.id.collection) {
                 changeFragment(R.id.fragment_container, CollectionFragment.class);
