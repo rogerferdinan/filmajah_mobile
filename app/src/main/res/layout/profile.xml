@@ -45,9 +45,13 @@
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:background="@color/primary"
-                    app:srcCompat="@drawable/ep_back"
-                    tools:layout_editor_absoluteX="25dp"
-                    tools:layout_editor_absoluteY="16dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.048"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.045"
+                    app:srcCompat="@drawable/ep_back" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ImageView

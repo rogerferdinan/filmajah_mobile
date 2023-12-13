@@ -58,105 +58,165 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/inter_black"
-            android:text="Email"
-            android:textColor="#282C38"
-            android:textSize="20sp" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etEmailAddress"
             android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="35dp"
-            android:background="@drawable/email_section_edit"
-            android:ems="10"
-            android:hint="johndoe@gmail.com"
-            android:paddingStart="10dp"
-            android:inputType="textEmailAddress" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="7dp"
-            android:fontFamily="@font/inter_black"
-            android:text="Full Name"
-            android:textColor="#282C38"
-            android:textSize="20sp" />
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="Email Address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="3dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            >
 
-        <EditText
-            android:id="@+id/etNama"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etFullname"
             android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="35dp"
-            android:background="@drawable/email_section_edit"
-            android:ems="10"
-            android:hint="John Doe"
-            android:paddingStart="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
-            android:layout_marginTop="7dp"
-            android:fontFamily="@font/inter_black"
-            android:text="Password"
-            android:textColor="#282C38"
-            android:textSize="20sp" />
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="Full Name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="3dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            >
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etPass"
             android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
-            android:background="@drawable/email_section_edit"
+            android:layout_marginTop="15dp"
             android:ems="10"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingStart="10dp" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="3dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="7dp"
-            android:fontFamily="@font/inter_black"
-            android:text="Confirm Password"
-            android:textColor="#282C38"
-            android:textSize="20sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
 
-        <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etConfirmPass"
             android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
-            android:background="@drawable/email_section_edit"
+            android:layout_marginTop="15dp"
             android:ems="10"
             android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:paddingStart="10dp"/>
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeWidth="3dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/etNama"-->
+<!--            android:layout_width="340dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="35dp"-->
+<!--            android:background="@drawable/email_section_edit"-->
+<!--            android:ems="10"-->
+<!--            android:hint="John Doe"-->
+<!--            android:paddingStart="10dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="35dp"-->
+<!--            android:layout_marginTop="7dp"-->
+<!--            android:fontFamily="@font/inter_black"-->
+<!--            android:text="Password"-->
+<!--            android:textColor="#282C38"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etPass"-->
+<!--            android:layout_width="340dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="35dp"-->
+<!--            android:background="@drawable/email_section_edit"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:paddingStart="10dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="35dp"-->
+<!--            android:layout_marginTop="7dp"-->
+<!--            android:fontFamily="@font/inter_black"-->
+<!--            android:text="Confirm Password"-->
+<!--            android:textColor="#282C38"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etConfirmPass"-->
+<!--            android:layout_width="340dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="35dp"-->
+<!--            android:background="@drawable/email_section_edit"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Confirm Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:paddingStart="10dp"/>-->
 
         <Button
             android:id="@+id/btnSignUp"

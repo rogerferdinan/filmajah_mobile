@@ -21,8 +21,6 @@
         android:id="@+id/tvBackArrow"
         android:layout_width="100dp"
         android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/inter_black"
         android:text="Log In"
@@ -52,8 +50,6 @@
         android:id="@+id/llWhiteBox"
         android:layout_width="417dp"
         android:layout_height="376dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="85dp"
         android:background="@drawable/white_bg"
         android:orientation="vertical"
@@ -61,31 +57,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-<!--        <TextView-->
-<!--            android:id="@+id/tvEmail"-->
-<!--            android:layout_width="70dp"-->
-<!--            android:layout_height="35dp"-->
-<!--            android:layout_alignParentLeft="true"-->
-<!--            android:layout_alignParentTop="true"-->
-<!--            android:layout_marginLeft="35dp"-->
-<!--            android:layout_marginTop="25dp"-->
-<!--            android:fontFamily="@font/inter_black"-->
-<!--            android:text="Email"-->
-<!--            android:textColor="#282C38"-->
-<!--            android:textSize="24sp" />-->
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etEmailAddress"
             android:layout_width="340dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="50dp"
             android:ems="10"
             android:hint="Email Address"
-            android:inputType="textEmailAddress"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:boxStrokeWidth="3dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -96,6 +78,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,9 +86,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/etPass"
             android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="15dp"
             android:ems="10"
@@ -121,34 +102,24 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/tvForgotPass"
-            android:layout_width="175dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_light"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="120dp"
-            android:textFontWeight="5000"
-            android:gravity="center"
-            android:textColor="#282C38"
-            android:text="Forgot Password ?" />
 
         <Button
             android:id="@+id/btnLogIn"
             android:layout_width="191dp"
             android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/primary"
             android:fontFamily="@font/inter_black"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
+            android:onClick="home"
             android:padding="10dp"
-            android:textSize="16dp"
             android:text="Log In"
-           />
+            android:textSize="16dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
