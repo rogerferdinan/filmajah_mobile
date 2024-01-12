@@ -46,7 +46,6 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
-
         android:id="@+id/llWhiteBox"
         android:layout_width="417dp"
         android:layout_height="376dp"
@@ -116,8 +115,6 @@
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/primary"
             android:fontFamily="@font/inter_black"
-            android:onClick="home"
-            android:padding="10dp"
             android:text="Log In"
             android:textSize="16dp" />
     </LinearLayout>

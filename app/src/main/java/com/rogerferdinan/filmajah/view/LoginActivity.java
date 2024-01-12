@@ -1,25 +1,22 @@
 package com.rogerferdinan.filmajah.view;
 
-import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.rogerferdinan.filmajah.R;
-import com.rogerferdinan.filmajah.view.fragment.HomeFragment;
+import com.rogerferdinan.filmajah.viewmodel.LoginVM;
 
-public class Login extends AppCompatActivity {
+import java.util.regex.Pattern;
+
+public class LoginActivity extends AppCompatActivity {
     private TextInputLayout tEmail;
     private TextInputLayout tPass;
     private Button bLogin;
@@ -29,8 +26,9 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.login_activity);
 
+        LoginVM loginVM = new LoginVM();
         tEmail = findViewById(R.id.etEmailAddress);
         tPass = findViewById(R.id.etPass);
         bLogin = findViewById(R.id.btnLogIn);
@@ -63,7 +61,9 @@ public class Login extends AppCompatActivity {
 
                 if (email.isEmpty()){
                     tEmail.setError("Cannot be empty");
-                }else{
+                } else if(!Pattern.matches(".+@.+\\..+", email)) {
+                    tEmail.setError("Format should be valid");
+                } else {
                     tEmail.setError(null);
                 }
 
@@ -73,20 +73,25 @@ public class Login extends AppCompatActivity {
                     tPass.setError(null);
                 }
 
-                if (email.equals("roger@gmail.com") && pass.equals("roger123")){
-                    startActivity(login);
-                }else{
-                    Toast.makeText(getApplicationContext(),"invalid email or password",Toast.LENGTH_SHORT).show();
+                if(!email.isEmpty() && !pass.isEmpty()) {
+                    loginVM.login(email, pass).observe(LoginActivity.this, apiResponse -> {
+                       if(apiResponse.success) {
+                           Intent next = new Intent(getApplicationContext(), MainActivity.class);
+                           next.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                           next.putExtra("email", email);
+                           next.putExtra("password", pass);
+                           startActivity(next);
+                           finish();
+                       } else {
+                           Toast.makeText(getApplicationContext(), apiResponse.message, Toast.LENGTH_LONG).show();
+                       }
+                    });
                 }
             }
         });
 
-        ibBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent back = new Intent(getApplicationContext(),LoginSignup.class);
-                startActivity(back);
-            }
+        ibBack.setOnClickListener(view -> {
+            finish();
         });
 
     }
